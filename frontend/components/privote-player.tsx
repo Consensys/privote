@@ -6,18 +6,15 @@ import { Button } from "@/components/ui/button";
 
 import {
   useWriteContract,
-  useReadContract,
   useWaitForTransactionReceipt,
 } from "wagmi";
 
-import { generateProof, verifyProof } from "@/app/actions/zkp";
 import { config } from "@/config";
 import { encryptVote } from "@/app/actions/vote";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import ChoiceCard from "./choice-card";
-import { encryptData, generateEcdhKeyPair } from "@/app/actions/ecdh";
+import ChoiceCard from "./choice-card"
 import { Chip } from "./ui/chip";
 
 interface Props {

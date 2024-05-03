@@ -8,10 +8,6 @@ interface MerkleManager {
   create: (leaves: string[]) => void;
   root: string | null;
   addLeaf: (leaf: string) => void;
-  getProof: (leaf: string) => {
-    position: "left" | "right";
-    data: string;
-  }[];
 }
 
 const createMerkleTreeManager = (): MerkleManager => {
@@ -57,7 +53,6 @@ const createMerkleTreeManager = (): MerkleManager => {
 
   return {
     get,
-    getProof,
     create,
     root,
     addLeaf,
