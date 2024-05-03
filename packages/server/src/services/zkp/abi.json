@@ -1,0 +1,68 @@
+{
+  "inputs": [
+    {
+      "name": "pk",
+      "public": true,
+      "type": "array",
+      "components": {
+        "size": 2,
+        "type": "field"
+      }
+    },
+    {
+      "name": "sk",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "context",
+      "public": true,
+      "type": "struct",
+      "components": {
+        "name": "BabyJubJubParams",
+        "generics": [],
+        "members": [
+          {
+            "name": "JUBJUB_C",
+            "type": "field"
+          },
+          {
+            "name": "JUBJUB_A",
+            "type": "field"
+          },
+          {
+            "name": "JUBJUB_D",
+            "type": "field"
+          },
+          {
+            "name": "MONT_A",
+            "type": "field"
+          },
+          {
+            "name": "MONT_B",
+            "type": "field"
+          },
+          {
+            "name": "INFINITY",
+            "type": "array",
+            "components": {
+              "size": 2,
+              "type": "field"
+            }
+          },
+          {
+            "name": "Gu",
+            "type": "field"
+          },
+          {
+            "name": "Gv",
+            "type": "field"
+          }
+        ]
+      }
+    }
+  ],
+  "output": {
+    "type": "bool"
+  }
+}

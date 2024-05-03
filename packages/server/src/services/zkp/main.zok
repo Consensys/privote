@@ -1,0 +1,7 @@
+import "ecc/proofOfOwnership" as proofOfOwnership;
+from "ecc/babyjubjubParams" import BabyJubJubParams;
+
+def main(field[2] pk, private field sk, BabyJubJubParams context) -> bool {
+  bool resp = proofOfOwnership(pk, sk,context);
+  return resp;
+}

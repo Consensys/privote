@@ -1,0 +1,21 @@
+.node__root > circle {
+    fill: white;
+  }
+  
+  .node__branch > circle {
+    fill: white;
+  }
+  
+  .node__leaf > circle {
+    fill: white;
+
+  }
+
+  .custom__links {
+    stroke: white !important;
+  }
+
+  .node__leaf > text {
+    fill: white !important;
+  }
+

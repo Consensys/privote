@@ -1,0 +1,41 @@
+{
+  "name": "sircular-webscraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "swc src --out-dir dist/src",
+    "build:ci": "tsc && npm run build:dev",
+    "build:watch": "swc src -w --out-dir dist",
+    "migrate": "node --import tsx bin/run-migration.ts",
+    "start:dev": "concurrently \"npm run build:watch\" \"nodemon dist/src/server.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@swc-node/register": "^1.9.0",
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.4.16",
+    "@swc/plugin-transform-imports": "^1.5.123",
+    "@zk-kit/baby-jubjub": "1.0.0-beta",
+    "@zk-kit/circuits": "1.0.0-beta",
+    "@zk-kit/eddsa-poseidon": "^0.11.0",
+    "@zk-kit/poseidon-cipher": "^0.3.0",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "swc": "^1.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "viem": "^2.9.9",
+    "zokrates-js": "^1.1.9"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21"
+  }
+}
